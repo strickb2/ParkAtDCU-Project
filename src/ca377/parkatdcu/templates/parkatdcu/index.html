@@ -1,5 +1,4 @@
 <h1>Welcome to ParkAtDCU</h1>
-
 {% for campus in campus_data %}
     <h2>{{ campus }}</h2>
     {% if campus in nullcarparks %}
@@ -7,7 +6,14 @@
     {% endif %}
     {% for carpark in carpark_data %}
         {% if carpark.campus_id == campus %}
-            <p>{{ carpark.name }}: {{ carpark.spaces }} spaces, {{ carpark.disabled_spaces }} spaces for people with disabilities</p>
+            {% for park, response in json %}
+                {% if carpark == park %}
+                    <p>{{ carpark.name }}: {{ carpark.spaces }} spaces,
+                        {{ carpark.disabled_spaces }} spaces for people with disabilities,
+                        {{ response }}
+                    </p>
+                {% endif %}
+            {% endfor %}
         {% endif %}
     {% endfor %}
 {% endfor %}
