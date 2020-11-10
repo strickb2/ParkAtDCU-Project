@@ -6,7 +6,7 @@
    <ul>
    {% for carpark in carparks %}
       <li>{{carpark.name}}: {{carpark.spaces}} spaces, {{carpark.disabled_spaces}} spaces for people with disabilities</li>
-         {% endfor %}
+   {% endfor %}
    </ul>
    {% else %}
       No carparks found
