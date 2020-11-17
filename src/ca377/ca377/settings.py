@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['containers.computing.dcu.ie','127.0.0.1']
 
+# COMMENT THIS OUT IF YOU ARE RUNNING YOUR SERVER LOCALLY
+# IF YOU ARE USING THE DJANGO CONTAINER, REPLACE jfosterdculab WITH YOUR USERNAME
+# USE_X_FORWARDED_HOST = True
+# FORCE_SCRIPT_NAME = '/jfosterdculab'
+
 
 # Application definition
 
