@@ -1,4 +1,5 @@
 <h1>Welcome to ParkAtDCU</h1>
+<<<<<<< HEAD
 {% for campus in campus_data %}
     <h2>{{ campus }}</h2>
     {% if campus in nullcarparks %}
@@ -17,3 +18,9 @@
         {% endif %}
     {% endfor %}
 {% endfor %}
+=======
+<form action="{% url 'parkatdcu:carparks' %}" method="get">
+    Campus: <input type="text" name="campus"><br>
+    <input type="submit" value="Go">
+</form>
+>>>>>>> upstream/master
