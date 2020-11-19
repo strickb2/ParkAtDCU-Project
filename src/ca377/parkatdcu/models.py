@@ -11,7 +11,7 @@ class Campus(models.Model):
 class Carpark(models.Model):
    carpark_id = models.IntegerField(primary_key=True)
    name = models.CharField(max_length=100)
-   campus_id = models.ForeignKey(Campus,on_delete = models.CASCADE, related_name="campus")
+   campus_id = models.ForeignKey(Campus,on_delete = models.CASCADE)
    spaces = models.IntegerField()
    disabled_spaces = models.IntegerField()
 

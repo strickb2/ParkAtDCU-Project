@@ -1,4 +1,5 @@
 <h2>{{ campus }}</h2>
+{% if carparks %}
 <ul>
   {% for carpark in carparks %}
     <li>{{carpark.name}}: {{carpark.spaces}} spaces, {{carpark.disabled_spaces}} spaces for people with disabilities
@@ -6,3 +7,7 @@
 	  </li>
   {% endfor %}
 </ul>
+{% else %}
+No carparks found
+{% endif %}
+
