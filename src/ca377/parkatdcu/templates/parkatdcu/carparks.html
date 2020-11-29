@@ -1,13 +1,87 @@
-<h2>{{ campus }}</h2>
+{% extends "base_layout.html" %}
+{% block content %}
+
+<h2>{{ campus }}</h2><br>
 {% if carparks %}
-<ul>
-  {% for carpark in carparks %}
-    <li>{{carpark.name}}: {{carpark.spaces}} spaces, {{carpark.disabled_spaces}} spaces for people with disabilities
-      <br>Spaces available:  {{ carpark.spaces_available }}<br><br>
-	  </li>
-  {% endfor %}
-</ul>
+    <div class ="row">
+        <div class ="col-sm-6">
+            <ul>
+            {% for carpark in carparks %}
+                <li>{{carpark.name}}: {{carpark.spaces}} spaces, {{carpark.disabled_spaces}} spaces for people with disabilities
+                <br>Spaces available:  {{ carpark.spaces_available }}<br><br>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class ="col-sm-6">
+            {% if campus.name == "Glasnevin" %}
+                <div class="row">
+                    <div class="col-sm-12 mb-4">
+                        <div class="card card-cascade narrower">
+                            <div class="card-header text-center">
+                                 <h5 class="mb-0">Map Of Glasnevin</h5>
+                            </div>
+                            <div class="card-body card-body-cascade text-center p-0 m-0">
+                                <div id="map-container-google-8" class="z-depth-1-half map-container-5">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.657898627628!2d-6.259786984716762!3d53.38517027950433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e11394810e3%3A0x2c0c031d9b65a450!2sGlasnevin%20Campus!5e0!3m2!1sen!2sie!4v1606599328834!5m2!1sen!2sie" frameborder="0" style="border:0" height="400" width="100%" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+            {% elif campus.name == "St. Pats" %}
+                <div class="row">
+                    <div class="col-sm-12 mb-4">
+                        <div class="card card-cascade narrower">
+                            <div class="card-header text-center">
+                                 <h5 class="mb-0">Map Of St. Pats</h5>
+                            </div>
+                            <div class="card-body card-body-cascade text-center p-0 m-0">
+                                <div id="map-container-google-8" class="z-depth-1-half map-container-5">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.4954810807926!2d-6.2568781847174275!3d53.37018358062734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e6f195d4363%3A0xc28e0a28047cf3e8!2sDCU%20St%20Patrick&#39;s%20Campus!5e0!3m2!1sen!2sie!4v1606599112960!5m2!1sen!2sie" frameborder="0" style="border:0" height="400" width="100%" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% elif campus.name == "All Hallows" %}
+                <div class="row">
+                    <div class="col-sm-12 mb-4">
+                        <div class="card card-cascade narrower">
+                            <div class="card-header text-center">
+                                 <h5 class="mb-0">Map Of All Hallows</h5>
+                            </div>
+                            <div class="card-body card-body-cascade text-center p-0 m-0">
+                                <div id="map-container-google-8" class="z-depth-1-half map-container-5">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.4467061645378!2d-6.251400084717402!3d53.37105638056196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e68544e4241%3A0x8195f1d6be592f88!2sDCU%20All%20Hallows%20Campus!5e0!3m2!1sen!2sie!4v1606599406422!5m2!1sen!2sie" frameborder="0" style="border:0" height="400" width="100%" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
 {% else %}
-No carparks found
+
+<div class="row">
+    <div class="col-sm-6"><p>No carparks found</p></div>
+    <div class="col-sm-6">
+        <div class="col-sm-12 mb-4">
+            <div class="card card-cascade narrower">
+                <div class="card-header text-center">
+                    <h5 class="mb-0">Map Of DCU Alpha</h5>
+                </div>
+                <div class="card-body card-body-cascade text-center p-0 m-0">
+                    <div id="map-container-google-8" class="z-depth-1-half map-container-5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.1520051773973!2d-6.273088684717179!3d53.37632968016686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e74c957d555%3A0x443bd6f0f85c8d63!2sDCU%20Alpha!5e0!3m2!1sen!2sie!4v1606651738476!5m2!1sen!2sie" frameborder="0" style="border:0" height="400" width="100%" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endif %}
+{% endblock %}
 
