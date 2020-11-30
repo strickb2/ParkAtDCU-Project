@@ -3,6 +3,7 @@ This website includes:
 * A **navbar** with links to the site's homepage and the main DCU website.
 * A **carousel** of images of the main DCU campuses, with the names of each included. These names include links that, when clicked, bring you to their respective campuses.
 * A **searchbar** that allow users to search for campuses.
+* **Webpages** for each campus that contain their information loaded from a database, live information on their carparks' and a Google Maps embed of their location.
 
 ## Installation:
 * In the top right corner of the project page, click the "Clone" button and copy the https url.
