@@ -11,5 +11,5 @@ This website includes:
 * To view the site, paste the link **"https://127.0.0.1:8000/parkatdcu"** into your browser.
 
 ## Testing:
-* In the **"ca377"** directory, run the command **"python3 manage.py** test parkatdcu" in the command line.
+* In the **"ca377"** directory, run the command **"python3 manage.py test parkatdcu"** in the command line.
 * This will run the tests and display the results.
