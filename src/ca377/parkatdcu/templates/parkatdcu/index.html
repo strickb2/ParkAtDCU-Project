@@ -6,6 +6,7 @@
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
         <h1>Welcome to ParkAtDCU</h1>
+        <!-- Search bar for campuses -->
         <div class="form-group">
             <form action="{% url 'parkatdcu:carparks' %}" method="get">
                 <h5>Campus:</h5>
@@ -14,6 +15,7 @@
             </form>
         </div>
         <br><br>
+        <!-- Carousel of images of DCU Campuses. Clicking the name of the campus will take you to its page. -->
         <div id="carousel-dcu" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
